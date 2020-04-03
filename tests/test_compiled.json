@@ -1,0 +1,32 @@
+{
+   "advanced": {
+      "datasource": "$PROMETHEUS",
+      "span": 12,
+      "targets": [ ],
+      "title": "test",
+      "type": "grafana-polystat-panel"
+   },
+   "basic": {
+      "datasource": null,
+      "span": 12,
+      "targets": [ ],
+      "title": "test",
+      "type": "grafana-polystat-panel"
+   },
+   "targets": {
+      "datasource": null,
+      "span": 12,
+      "targets": [
+         {
+            "a": "foo",
+            "refId": "A"
+         },
+         {
+            "b": "foo",
+            "refId": "B"
+         }
+      ],
+      "title": "with targets",
+      "type": "grafana-polystat-panel"
+   }
+}
