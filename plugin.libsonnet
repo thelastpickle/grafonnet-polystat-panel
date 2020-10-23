@@ -60,6 +60,9 @@ local polystatPanel = {
     tooltip_secondary_sort_field=null,
     tooltip_timestamp_enabled=null,
     value_enabled=null,
+    value_maps=null,
+    range_maps=null,
+    mapping_type=null,
   ):: {
     type: 'grafana-polystat-panel',
     title: title,
@@ -72,6 +75,27 @@ local polystatPanel = {
     [if saved_overrides != null then 'savedOverrides']: saved_overrides,
     [if saved_composites != null then 'savedComposites']: saved_composites,
     [if colors != null then 'colors']: colors,
+    mappingTypes: [
+        {
+          name: 'value to text',
+          value: 1,
+        },
+        {
+          name: 'range to text',
+          value: 2,
+        },
+      ],
+      [if mapping_type != null then 'mappingType']:
+        if mapping_type == 'value'
+        then
+          1
+        else if mapping_type == 'range'
+        then
+          2
+        else
+          mapping_type,
+    [if value_maps != null then 'valueMaps']: value_maps,
+    [if range_maps != null then 'rangeMaps']: range_maps,
 
     polystat: {
       [if animation_speed != null then 'animationSpeed']: animation_speed,
