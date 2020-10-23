@@ -59,6 +59,7 @@ local polystatPanel = {
     tooltip_secondary_sort_direction=null,
     tooltip_secondary_sort_field=null,
     tooltip_timestamp_enabled=null,
+    value_enabled=null,
   ):: {
     type: 'grafana-polystat-panel',
     title: title,
@@ -110,6 +111,7 @@ local polystatPanel = {
       [if tooltip_secondary_sort_direction != null then 'tooltipSecondarySortDirection']: tooltip_secondary_sort_direction,
       [if tooltip_secondary_sort_field != null then 'tooltipSecondarySortField']: tooltip_secondary_sort_field,
       [if tooltip_timestamp_enabled != null then 'tooltipTimestampEnabled']: tooltip_timestamp_enabled,
+      [if value_enabled != null then 'valueEnabled']: value_enabled,
     },
     targets: [],
     _nextTarget:: 0,

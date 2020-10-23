@@ -1,6 +1,8 @@
 {
    "advanced": {
       "datasource": "$PROMETHEUS",
+      "description": "description",
+      "polystat": { },
       "span": 12,
       "targets": [ ],
       "title": "test",
@@ -8,6 +10,7 @@
    },
    "basic": {
       "datasource": null,
+      "polystat": { },
       "span": 12,
       "targets": [ ],
       "title": "test",
@@ -15,6 +18,7 @@
    },
    "targets": {
       "datasource": null,
+      "polystat": { },
       "span": 12,
       "targets": [
          {
